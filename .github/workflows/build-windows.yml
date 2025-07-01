@@ -1,0 +1,56 @@
+name: Build Windows App
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.29.3'
+        channel: 'stable'
+
+    - name: Enable Windows desktop
+      run: flutter config --enable-windows-desktop
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Analyze code
+      run: flutter analyze
+
+    - name: Run tests
+      run: flutter test
+
+    - name: Build Windows app
+      run: flutter build windows --release
+
+    - name: Create portable zip
+      run: |
+        cd build/windows/x64/runner/Release
+        7z a -tzip ../../../../../distrimax-sync-app-windows.zip *
+
+    - name: Upload Windows build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: distrimax-sync-app-windows
+        path: distrimax-sync-app-windows.zip
+
+    - name: Create Release (if tag)
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: distrimax-sync-app-windows.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

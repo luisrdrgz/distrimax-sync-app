@@ -1,0 +1,24 @@
+# Dockerfile para compilar Flutter app para Windows
+FROM cirrusci/flutter:stable
+
+# Instalar dependencias para Windows
+RUN apt-get update && apt-get install -y \
+    wine \
+    mingw-w64 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configurar Wine
+RUN winecfg
+
+# Copiar código fuente
+WORKDIR /app
+COPY . .
+
+# Obtener dependencias
+RUN flutter pub get
+
+# Habilitar Windows
+RUN flutter config --enable-windows-desktop
+
+# Compilar para Windows (esto requerirá más configuración)
+# RUN flutter build windows

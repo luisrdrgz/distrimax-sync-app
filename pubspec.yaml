@@ -1,0 +1,65 @@
+name: sync_app
+description: Distrimax Product Synchronization App
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Database connectivity
+  mysql1: ^0.20.0
+  
+  # HTTP client for API calls
+  http: ^1.1.0
+  
+  # Local storage
+  shared_preferences: ^2.2.0
+  flutter_secure_storage: ^9.0.0
+  
+  # State management
+  provider: ^6.1.0
+  
+  # Timer and scheduling
+  timer_builder: ^2.0.0
+  
+  # Date formatting
+  intl: ^0.18.1
+  
+  # Logging
+  logging: ^1.2.0
+  
+  # Path utilities
+  path: ^1.8.3
+  
+  # File operations
+  path_provider: ^2.1.1
+  
+  # Window management (desktop)
+  window_manager: ^0.3.7
+  
+  # Material design
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # Assets
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+  # Fonts (commented out as files don't exist)
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf
+  #         weight: 700
