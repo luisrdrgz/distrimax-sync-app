@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "sync_app" "\0"
+            VALUE "CompanyName", "DistriMax" "\0"
+            VALUE "FileDescription", "DistriMax Sync App - Sincronización de productos" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "sync_app" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "sync_app.exe" "\0"
-            VALUE "ProductName", "sync_app" "\0"
+            VALUE "InternalName", "distrimax_sync" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 DistriMax. All rights reserved." "\0"
+            VALUE "OriginalFilename", "distrimax_sync.exe" "\0"
+            VALUE "ProductName", "DistriMax Sync App" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
