@@ -5,24 +5,24 @@ class AppTheme {
   static const Color primaryBlue = Color(0xFF1E3A8A);
   static const Color primaryBlueLight = Color(0xFF3B82F6);
   static const Color primaryBlueDark = Color(0xFF1E40AF);
-  
+
   static const Color accentGreen = Color(0xFF10B981);
   static const Color accentGreenLight = Color(0xFF34D399);
   static const Color accentGreenDark = Color(0xFF059669);
-  
+
   static const Color warningOrange = Color(0xFFF59E0B);
   static const Color warningOrangeLight = Color(0xFFFBBF24);
-  
+
   static const Color errorRed = Color(0xFFEF4444);
   static const Color errorRedLight = Color(0xFFF87171);
-  
+
   static const Color backgroundLight = Color(0xFFF8FAFC);
   static const Color backgroundMedium = Color(0xFFF1F5F9);
   static const Color backgroundDark = Color(0xFFE2E8F0);
-  
+
   static const Color cardBackground = Color(0xFFFFFFFF);
   static const Color cardBorder = Color(0xFFE5E7EB);
-  
+
   static const Color textPrimary = Color(0xFF1F2937);
   static const Color textSecondary = Color(0xFF6B7280);
   static const Color textMuted = Color(0xFF9CA3AF);
@@ -39,7 +39,7 @@ class AppTheme {
         background: backgroundLight,
         error: errorRed,
       ),
-      
+
       // App Bar Theme
       appBarTheme: const AppBarTheme(
         backgroundColor: cardBackground,
@@ -57,9 +57,9 @@ class AppTheme {
           size: 20,
         ),
       ),
-      
+
       // Card Theme
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: cardBackground,
         elevation: 2,
         shadowColor: Colors.black.withOpacity(0.08),
@@ -72,7 +72,7 @@ class AppTheme {
         ),
         margin: const EdgeInsets.symmetric(vertical: 6),
       ),
-      
+
       // Elevated Button Theme
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -90,7 +90,7 @@ class AppTheme {
           ),
         ),
       ),
-      
+
       // Outlined Button Theme
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
@@ -106,7 +106,7 @@ class AppTheme {
           ),
         ),
       ),
-      
+
       // Text Button Theme
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
@@ -117,7 +117,7 @@ class AppTheme {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         ),
       ),
-      
+
       // Input Decoration Theme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -138,7 +138,8 @@ class AppTheme {
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: errorRed),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         labelStyle: const TextStyle(
           color: textSecondary,
           fontSize: 14,
@@ -148,7 +149,7 @@ class AppTheme {
           fontSize: 14,
         ),
       ),
-      
+
       // Switch Theme
       switchTheme: SwitchThemeData(
         thumbColor: MaterialStateProperty.resolveWith((states) {
@@ -164,19 +165,19 @@ class AppTheme {
           return backgroundDark;
         }),
       ),
-      
+
       // Progress Indicator Theme
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: primaryBlue,
         linearTrackColor: backgroundDark,
       ),
-      
+
       // Icon Theme
       iconTheme: const IconThemeData(
         color: textSecondary,
         size: 20,
       ),
-      
+
       // Text Theme
       textTheme: const TextTheme(
         headlineLarge: TextStyle(
@@ -235,10 +236,10 @@ class AppTheme {
           fontWeight: FontWeight.w500,
         ),
       ),
-      
+
       // Scaffold Background
       scaffoldBackgroundColor: backgroundLight,
-      
+
       // Divider Theme
       dividerTheme: const DividerThemeData(
         color: cardBorder,
@@ -254,7 +255,7 @@ class AppTheme {
   static const Color statusSyncing = Color(0xFF8B5CF6);
   static const Color statusCompleted = accentGreen;
   static const Color statusError = errorRed;
-  
+
   // Background colors for status cards
   static const Color statusIdleBackground = Color(0xFFF9FAFB);
   static const Color statusConnectingBackground = Color(0xFFF0F9FF);
@@ -297,3 +298,4 @@ class AppTheme {
     }
   }
 }
+
